@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="user" class="com.spring.AutoWire.User" autowire="byType">
+   		<property name="userName" value="Mathan"/>
+   </bean>
+
+	<bean id="Laptop" class="com.spring.Usage.Laptop"/>
+    <bean id="Desktop" class="com.spring.Usage.Desktop" primary="true"/>
+   
+  </beans>
