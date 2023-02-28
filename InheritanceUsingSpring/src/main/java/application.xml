@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   	http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    
+    <bean id="Shape" class="com.spring.Shapes.Shape"/>
+    
+    <bean id="Triangle" class="com.spring.Shapes.Triangle" parent="Shape">
+    	<property name="height" value="5"></property>
+    	<property name="width" value="10"/>
+    </bean>
+    
+    <bean id="Rectangle" class="com.spring.Shapes.Rectangle" parent="Shape">
+    	<property name="height" value="6"/>
+    	<property name="width" value="25"/>
+    </bean>
+</beans>
