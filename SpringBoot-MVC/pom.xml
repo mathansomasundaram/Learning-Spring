@@ -6,12 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.0.3</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.spring</groupId>
-	<artifactId>SpringBoot</artifactId>
+	<groupId>com.springboot</groupId>
+	<artifactId>SpringBoot-MVC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBoot</name>
+	<name>SpringBoot-MVC</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>8</java.version>
@@ -21,6 +21,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -33,6 +34,7 @@
 			<version>10.0.27</version>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -41,4 +43,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
