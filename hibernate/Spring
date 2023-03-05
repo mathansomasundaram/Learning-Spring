@@ -1,0 +1,11 @@
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO] HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/practice]
