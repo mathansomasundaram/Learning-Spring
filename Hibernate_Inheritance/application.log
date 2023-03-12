@@ -6,10 +6,21 @@
 [INFO] HHH10001003: Autocommit mode: false
 [INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
 [INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[WARN] HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
 [INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
-[INFO] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@47acd13b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[INFO] HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    /* select
+        distinct(playerName) 
+    from
+        CricketPlayer 
+    order by
+        playerName */ select
+            distinct cricketpla0_.name as col_0_0_ 
+        from
+            cricket_player cricketpla0_ 
+        order by
+            cricketpla0_.name
 [INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
 [INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
 [WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
@@ -18,12 +29,35 @@
 [INFO] HHH10001003: Autocommit mode: false
 [INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
 [INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
 [INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
-[INFO] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@52ae997b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 [INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[WARN] SQL Error: 1364, SQLState: HY000
-[ERROR] Field 'player_id' doesn't have a default value
-[ERROR] javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: could not execute statement
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age<=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[ERROR] java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
 [INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
 [INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
 [WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
@@ -32,7 +66,407 @@
 [INFO] HHH10001003: Autocommit mode: false
 [INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
 [INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
 [INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
-[INFO] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5d152bcd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[INFO] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@733c464f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 [INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age<=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[ERROR] java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age<=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[ERROR] java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age<=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age<=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age>=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age>=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        distinct this_.name as y0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age>=?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[ERROR] java.lang.ClassCastException: class java.lang.String cannot be cast to class com.spring.Hibernate.model.CricketPlayer (java.lang.String is in module java.base of loader 'bootstrap'; com.spring.Hibernate.model.CricketPlayer is in unnamed module of loader 'app')
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age between ? and ?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[TRACE] binding parameter [2] as [INTEGER] - [40]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age between ? and ? 
+        and this_.name like ?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[TRACE] binding parameter [2] as [INTEGER] - [40]
+[TRACE] binding parameter [3] as [VARCHAR] - [Um]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age between ? and ? 
+        and this_.name like ?
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[TRACE] binding parameter [2] as [INTEGER] - [40]
+[TRACE] binding parameter [3] as [VARCHAR] - [Um%]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[ERROR] java.lang.ClassCastException: class org.hibernate.criterion.Order cannot be cast to class org.hibernate.criterion.Criterion (org.hibernate.criterion.Order and org.hibernate.criterion.Criterion are in unnamed module of loader 'app')
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[WARN] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[DEBUG] 
+    /* criteria query */ select
+        this_.player_id as player_i1_2_0_,
+        this_.age as age2_2_0_,
+        this_.name as name3_2_0_,
+        this_.role as role4_2_0_,
+        this_1_.bowling_average as bowling_1_1_0_,
+        this_2_.batting_average as batting_1_0_0_,
+        case 
+            when this_1_.player_id is not null then 1 
+            when this_2_.player_id is not null then 2 
+            when this_.player_id is not null then 0 
+        end as clazz_0_ 
+    from
+        cricket_player this_ 
+    left outer join
+        Bowler this_1_ 
+            on this_.player_id=this_1_.player_id 
+    left outer join
+        Batter this_2_ 
+            on this_.player_id=this_2_.player_id 
+    where
+        this_.age between ? and ? 
+    order by
+        this_.name asc
+[TRACE] binding parameter [1] as [INTEGER] - [35]
+[TRACE] binding parameter [2] as [INTEGER] - [40]
