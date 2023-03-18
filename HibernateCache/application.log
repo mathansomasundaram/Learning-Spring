@@ -1,0 +1,229 @@
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    select
+        countrydet0_.code as code1_0_0_,
+        countrydet0_.name as name2_0_0_,
+        countrydet0_.region as region3_0_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code=?
+[TRACE] binding parameter [1] as [VARCHAR] - [IND]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    select
+        countrydet0_.code as code1_0_0_,
+        countrydet0_.name as name2_0_0_,
+        countrydet0_.region as region3_0_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code=?
+[TRACE] binding parameter [1] as [VARCHAR] - [IND]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    select
+        countrydet0_.code as code1_0_0_,
+        countrydet0_.name as name2_0_0_,
+        countrydet0_.region as region3_0_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code=?
+[TRACE] binding parameter [1] as [VARCHAR] - [IND]
+[DEBUG] 
+    select
+        countrydet0_.code as code1_0_0_,
+        countrydet0_.name as name2_0_0_,
+        countrydet0_.region as region3_0_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code=?
+[TRACE] binding parameter [1] as [VARCHAR] - [IND]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[WARN] HHH020100: The Ehcache second-level cache provider for Hibernate is deprecated.  See https://hibernate.atlassian.net/browse/HHH-12441 for details.
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[WARN] HHH90001006: Missing cache[com.sping.hibernate.model.CountryDetails] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    select
+        countrydet0_.code as code1_0_0_,
+        countrydet0_.name as name2_0_0_,
+        countrydet0_.region as region3_0_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code=?
+[TRACE] binding parameter [1] as [VARCHAR] - [IND]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[WARN] HHH020100: The Ehcache second-level cache provider for Hibernate is deprecated.  See https://hibernate.atlassian.net/browse/HHH-12441 for details.
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[WARN] HHH90001006: Missing cache[com.sping.hibernate.model.CountryDetails] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[WARN] HHH020100: The Ehcache second-level cache provider for Hibernate is deprecated.  See https://hibernate.atlassian.net/browse/HHH-12441 for details.
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[WARN] HHH90001006: Missing cache[com.sping.hibernate.model.CountryDetails] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[WARN] HHH020100: The Ehcache second-level cache provider for Hibernate is deprecated.  See https://hibernate.atlassian.net/browse/HHH-12441 for details.
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[WARN] HHH90001006: Missing cache[com.sping.hibernate.model.CountryDetails] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    /* 
+from
+    CountryDetails 
+where
+    CountryCode='IND' */ select
+        countrydet0_.code as code1_0_,
+        countrydet0_.name as name2_0_,
+        countrydet0_.region as region3_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code='IND'
+[DEBUG] 
+    /* 
+from
+    CountryDetails 
+where
+    CountryCode='IND' */ select
+        countrydet0_.code as code1_0_,
+        countrydet0_.name as name2_0_,
+        countrydet0_.region as region3_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code='IND'
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[WARN] HHH020100: The Ehcache second-level cache provider for Hibernate is deprecated.  See https://hibernate.atlassian.net/browse/HHH-12441 for details.
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[WARN] HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[WARN] HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[WARN] HHH90001006: Missing cache[com.sping.hibernate.model.CountryDetails] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    /* 
+from
+    CountryDetails 
+where
+    CountryCode='IND' */ select
+        countrydet0_.code as code1_0_,
+        countrydet0_.name as name2_0_,
+        countrydet0_.region as region3_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code='IND'
+[INFO] HHH000412: Hibernate ORM core version 5.4.12.Final
+[WARN] HHH020100: The Ehcache second-level cache provider for Hibernate is deprecated.  See https://hibernate.atlassian.net/browse/HHH-12441 for details.
+[INFO] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[WARN] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/practice]
+[INFO] HHH10001001: Connection properties: {password=****, user=root}
+[INFO] HHH10001003: Autocommit mode: false
+[INFO] HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[WARN] HHH90001006: Missing cache[default-update-timestamps-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[WARN] HHH90001006: Missing cache[default-query-results-region] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HV000001: Hibernate Validator 6.2.0.Final
+[INFO] HSEARCH000034: Hibernate Search 5.11.5.Final
+[WARN] HHH90001006: Missing cache[com.sping.hibernate.model.CountryDetails] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.cache.ehcache.missing_cache_strategy' to 'create'.
+[INFO] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 
+    /* findAllDetails */ select
+        countrydet0_.code as code1_0_,
+        countrydet0_.name as name2_0_,
+        countrydet0_.region as region3_0_ 
+    from
+        country_detail countrydet0_ 
+    where
+        countrydet0_.code='IND'
