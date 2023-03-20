@@ -19,13 +19,13 @@ public class CountryController {
 	CountryRepo repo;
 
 	@GetMapping(path="countryDetails",produces = {"application/xml"})
-	public List<CountryDetail> getCountryDetails() {
+	public List<CountryDetail> getCountryDetails(){
 		return repo.findAll();
 	}
 	
 	
 	@GetMapping("countryDetail/{code}")
-	public CountryDetail getCounty(@PathVariable("code") String code) {
+	public CountryDetail getCountry(@PathVariable("code") String code) {
 		return repo.findById(code).orElse(null);
 	}
 	
